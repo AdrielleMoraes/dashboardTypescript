@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/app-masters-dashboard/static/css/main.90d6e3f5.chunk.css",
+    "main.js": "/app-masters-dashboard/static/js/main.b7ef8f2e.chunk.js",
+    "main.js.map": "/app-masters-dashboard/static/js/main.b7ef8f2e.chunk.js.map",
+    "runtime-main.js": "/app-masters-dashboard/static/js/runtime-main.43d02c9a.js",
+    "runtime-main.js.map": "/app-masters-dashboard/static/js/runtime-main.43d02c9a.js.map",
+    "static/css/2.30cbe4fd.chunk.css": "/app-masters-dashboard/static/css/2.30cbe4fd.chunk.css",
+    "static/js/2.9277f158.chunk.js": "/app-masters-dashboard/static/js/2.9277f158.chunk.js",
+    "static/js/2.9277f158.chunk.js.map": "/app-masters-dashboard/static/js/2.9277f158.chunk.js.map",
+    "index.html": "/app-masters-dashboard/index.html",
+    "precache-manifest.5e0ec975b1ca4076f2a7fb98a84f9b3d.js": "/app-masters-dashboard/precache-manifest.5e0ec975b1ca4076f2a7fb98a84f9b3d.js",
+    "service-worker.js": "/app-masters-dashboard/service-worker.js",
+    "static/css/2.30cbe4fd.chunk.css.map": "/app-masters-dashboard/static/css/2.30cbe4fd.chunk.css.map",
+    "static/css/main.90d6e3f5.chunk.css.map": "/app-masters-dashboard/static/css/main.90d6e3f5.chunk.css.map",
+    "static/js/2.9277f158.chunk.js.LICENSE.txt": "/app-masters-dashboard/static/js/2.9277f158.chunk.js.LICENSE.txt",
+    "static/media/sidebar-1.jpg": "/app-masters-dashboard/static/media/sidebar-1.8e9f0a3c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43d02c9a.js",
+    "static/css/2.30cbe4fd.chunk.css",
+    "static/js/2.9277f158.chunk.js",
+    "static/css/main.90d6e3f5.chunk.css",
+    "static/js/main.b7ef8f2e.chunk.js"
+  ]
+}
