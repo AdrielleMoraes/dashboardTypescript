@@ -1,4 +1,5 @@
 {
+  "homepage": "https://adriellemoraes.com/app-masters-dashboard",
   "name": "app-masters-dashboard",
   "version": "1.6.0",
   "description": "Dashboard react",
@@ -17,11 +18,12 @@
     "csstype": "3.0.3",
     "history": "5.0.0",
     "lodash": "4.17.20",
-    "moment": "2.29.0",
+    "moment": "^2.29.0",
     "perfect-scrollbar": "1.5.0",
     "prettier": "2.1.2",
     "react": "16.13.1",
     "react-chartist": "0.14.3",
+    "react-day-picker": "^7.4.8",
     "react-dom": "16.13.1",
     "react-google-maps": "9.4.5",
     "react-router-dom": "5.2.0",
@@ -32,6 +34,8 @@
     "typescript": "4.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -59,5 +63,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
