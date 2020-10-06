@@ -10,6 +10,7 @@ const style = createStyles({
     marginLeft: '50px !important',
     marginRight: '50px !important',
     width: 'unset'
+    
   }
 });
 

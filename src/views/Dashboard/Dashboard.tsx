@@ -7,7 +7,7 @@ import 'react-day-picker/lib/style.css';
 import ChartistGraph from "react-chartist";
 // @material-ui/core
 import withStyles from "@material-ui/core/styles/withStyles";
-import Icon from "@material-ui/core/Icon";
+
 
 // @material-ui/icons
 import PublicIcon from '@material-ui/icons/Public';
@@ -36,7 +36,7 @@ import Select from '@material-ui/core/Select';
 
 import dashboardStyle from "../../assets/jss/material-dashboard-react/views/dashboardStyle";
 
-
+import "./dashboard.css";
 
 
 type Country = {
@@ -216,8 +216,6 @@ class Dashboard extends React.Component<Props, State> {
       tasks = this.updateTasks(month_holidays);
     }
 
-
-
     let distributionYear = {
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -236,7 +234,7 @@ class Dashboard extends React.Component<Props, State> {
       <div>
         {this.state.loaded?      
           <div>
-        <GridContainer>
+        <GridContainer className="container-custom">
           <GridItem xs={12} md={4}>
             <FormControl className={classes.formControl}>
             <InputLabel id="demo-simple-select-label">Country</InputLabel>
