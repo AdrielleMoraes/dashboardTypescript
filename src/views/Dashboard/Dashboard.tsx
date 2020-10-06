@@ -233,8 +233,8 @@ class Dashboard extends React.Component<Props, State> {
     return (
       <div>
         {this.state.loaded?      
-          <div>
-        <GridContainer className="container-custom">
+          <div className="container-custom"> 
+        <GridContainer >
           <GridItem xs={12} md={4}>
             <FormControl className={classes.formControl}>
             <InputLabel id="demo-simple-select-label">Country</InputLabel>
@@ -269,6 +269,16 @@ class Dashboard extends React.Component<Props, State> {
                 <h3 className={classes.cardTitle}>{ex_country?.country_name}</h3>
               </CardHeader>
             </Card>
+            <Card>
+                <CardHeader color="danger" stats={true} icon={true}>
+                  <CardIcon color="danger">
+                    <BeachAccessIcon/>
+                  </CardIcon>
+                  <p className={classes.cardCategory}>Holidays this month</p>
+                  <h3 className={classes.cardTitle}>{month_holidays?.length}</h3>
+                </CardHeader>
+              </Card>
+
           </GridItem>
           <GridItem xs={12} md={4}>
             <Card>
@@ -282,24 +292,6 @@ class Dashboard extends React.Component<Props, State> {
                 </h3>
               </CardHeader>
             </Card>
-          </GridItem>
-        </GridContainer>
-
-        <GridContainer>
-          <GridItem xs={12} md={4}>
-        </GridItem>
-          <GridItem xs={12} md={4}>
-              <Card>
-                <CardHeader color="danger" stats={true} icon={true}>
-                  <CardIcon color="danger">
-                    <BeachAccessIcon/>
-                  </CardIcon>
-                  <p className={classes.cardCategory}>Holidays this month</p>
-                  <h3 className={classes.cardTitle}>{month_holidays?.length}</h3>
-                </CardHeader>
-              </Card>
-            </GridItem>
-          <GridItem xs={12} md={4}>
             <Card>
               <CardHeader color="primary" stats={true} icon={true}>
                 <CardIcon color="primary">
@@ -311,6 +303,17 @@ class Dashboard extends React.Component<Props, State> {
                 <h3 className={classes.cardTitle}>{ex_dayHolidays?.length}</h3>
               </CardHeader>
             </Card>
+          </GridItem>
+        </GridContainer>
+
+        <GridContainer>
+          <GridItem xs={12} md={4}>
+        </GridItem>
+          <GridItem xs={12} md={4}>
+
+            </GridItem>
+          <GridItem xs={12} md={4}>
+
           </GridItem>
         </GridContainer>
 

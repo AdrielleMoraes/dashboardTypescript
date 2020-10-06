@@ -1,10 +1,9 @@
 .container-custom{
-    margin: 100px 10px !important;
-    color: green;
+    margin: 70px 300px !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
     .container-custom{
-        margin: 0;
+        margin: 20px !important;
     }
   }
