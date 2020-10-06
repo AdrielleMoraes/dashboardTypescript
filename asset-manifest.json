@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/dashboardTypescript/static/css/main.90d6e3f5.chunk.css",
-    "main.js": "/dashboardTypescript/static/js/main.b7ef8f2e.chunk.js",
-    "main.js.map": "/dashboardTypescript/static/js/main.b7ef8f2e.chunk.js.map",
+    "main.css": "/dashboardTypescript/static/css/main.035633b6.chunk.css",
+    "main.js": "/dashboardTypescript/static/js/main.5c80ea3d.chunk.js",
+    "main.js.map": "/dashboardTypescript/static/js/main.5c80ea3d.chunk.js.map",
     "runtime-main.js": "/dashboardTypescript/static/js/runtime-main.4a2631f0.js",
     "runtime-main.js.map": "/dashboardTypescript/static/js/runtime-main.4a2631f0.js.map",
-    "static/css/2.30cbe4fd.chunk.css": "/dashboardTypescript/static/css/2.30cbe4fd.chunk.css",
-    "static/js/2.9277f158.chunk.js": "/dashboardTypescript/static/js/2.9277f158.chunk.js",
-    "static/js/2.9277f158.chunk.js.map": "/dashboardTypescript/static/js/2.9277f158.chunk.js.map",
+    "static/css/2.455cd81f.chunk.css": "/dashboardTypescript/static/css/2.455cd81f.chunk.css",
+    "static/js/2.879a6ba8.chunk.js": "/dashboardTypescript/static/js/2.879a6ba8.chunk.js",
+    "static/js/2.879a6ba8.chunk.js.map": "/dashboardTypescript/static/js/2.879a6ba8.chunk.js.map",
     "index.html": "/dashboardTypescript/index.html",
-    "precache-manifest.766505bf8a2aaff7f774b3204dff4a59.js": "/dashboardTypescript/precache-manifest.766505bf8a2aaff7f774b3204dff4a59.js",
+    "precache-manifest.a33684028d8c71d5d988702e272bc099.js": "/dashboardTypescript/precache-manifest.a33684028d8c71d5d988702e272bc099.js",
     "service-worker.js": "/dashboardTypescript/service-worker.js",
-    "static/css/2.30cbe4fd.chunk.css.map": "/dashboardTypescript/static/css/2.30cbe4fd.chunk.css.map",
-    "static/css/main.90d6e3f5.chunk.css.map": "/dashboardTypescript/static/css/main.90d6e3f5.chunk.css.map",
-    "static/js/2.9277f158.chunk.js.LICENSE.txt": "/dashboardTypescript/static/js/2.9277f158.chunk.js.LICENSE.txt",
-    "static/media/sidebar-1.jpg": "/dashboardTypescript/static/media/sidebar-1.8e9f0a3c.jpg"
+    "static/css/2.455cd81f.chunk.css.map": "/dashboardTypescript/static/css/2.455cd81f.chunk.css.map",
+    "static/css/main.035633b6.chunk.css.map": "/dashboardTypescript/static/css/main.035633b6.chunk.css.map",
+    "static/js/2.879a6ba8.chunk.js.LICENSE.txt": "/dashboardTypescript/static/js/2.879a6ba8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4a2631f0.js",
-    "static/css/2.30cbe4fd.chunk.css",
-    "static/js/2.9277f158.chunk.js",
-    "static/css/main.90d6e3f5.chunk.css",
-    "static/js/main.b7ef8f2e.chunk.js"
+    "static/css/2.455cd81f.chunk.css",
+    "static/js/2.879a6ba8.chunk.js",
+    "static/css/main.035633b6.chunk.css",
+    "static/js/main.5c80ea3d.chunk.js"
   ]
 }
