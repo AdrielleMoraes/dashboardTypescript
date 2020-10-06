@@ -8,8 +8,15 @@ import ChartistGraph from "react-chartist";
 // @material-ui/core
 import withStyles from "@material-ui/core/styles/withStyles";
 import Icon from "@material-ui/core/Icon";
+
 // @material-ui/icons
-import Store from "@material-ui/icons/Store";
+import PublicIcon from '@material-ui/icons/Public';
+import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+
+import ListIcon from '@material-ui/icons/List';
+
+import CheckIcon from '@material-ui/icons/Check';
+import ClearIcon from '@material-ui/icons/Clear';
 
 
 // core components
@@ -88,7 +95,7 @@ interface State {
   messageFailed: boolean;
   api_key: string,
 
-
+  loaded: boolean,
   year: number;
   month: number;
   day: number;
@@ -110,7 +117,7 @@ class Dashboard extends React.Component<Props, State> {
       value: 0,
       messageSuccess: true,
       messageFailed: true,
-
+      loaded: false,
       api_key: "b518661602ef8ef45db2cb0f88e1013c7b303b56",
       year: d.getFullYear(),
       month: d.getMonth() + 1,
@@ -147,7 +154,7 @@ class Dashboard extends React.Component<Props, State> {
     fetch(holidays_url)
     .then((response) => response.json())
     .then((response: APIHolidaysResponse) => {
-      return this.setState({apiHolidaysResponse: response });
+      return this.setState({apiHolidaysResponse: response, loaded:true });
     });
   }
 
@@ -227,8 +234,10 @@ class Dashboard extends React.Component<Props, State> {
 
     return (
       <div>
+        {this.state.loaded?      
+          <div>
         <GridContainer>
-        <GridItem xs={12} md={4}>
+          <GridItem xs={12} md={4}>
             <FormControl className={classes.formControl}>
             <InputLabel id="demo-simple-select-label">Country</InputLabel>
             <Select
@@ -243,9 +252,8 @@ class Dashboard extends React.Component<Props, State> {
           </FormControl>
           </GridItem>
         </GridContainer>
+
         <GridContainer>
-
-
           <GridItem xs={12} md={4}>
             <DayPicker 
             selectedDays={this.state.selectedDay}
@@ -254,37 +262,21 @@ class Dashboard extends React.Component<Props, State> {
             />
               </GridItem>
           <GridItem xs={12} md={4}>
-              <Card>
-                <CardHeader color="danger" stats={true} icon={true}>
-                  <CardIcon color="danger">
-                    <Icon>info_outline</Icon>
-                  </CardIcon>
-                  <p className={classes.cardCategory}>Holidays this month</p>
-                  <h3 className={classes.cardTitle}>{month_holidays?.length}</h3>
-                </CardHeader>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} md={4}>
             <Card>
               <CardHeader color="success" stats={true} icon={true}>
                 <CardIcon color="success">
-                  <Store />
+                  <PublicIcon />
                 </CardIcon>
                 <p className={classes.cardCategory}>Country</p>
                 <h3 className={classes.cardTitle}>{ex_country?.country_name}</h3>
               </CardHeader>
             </Card>
           </GridItem>
-        </GridContainer>
-
-        <GridContainer>
-        <GridItem xs={12} md={4}>
-          </GridItem>
           <GridItem xs={12} md={4}>
             <Card>
               <CardHeader color="info" stats={true} icon={true}>
                 <CardIcon color="info">
-                  <Icon>info_outline</Icon>
+                  <ListIcon/>
                 </CardIcon>
                 <p className={classes.cardCategory}>Total Number of Holidays</p>
                 <h3 className={classes.cardTitle}>
@@ -293,11 +285,29 @@ class Dashboard extends React.Component<Props, State> {
               </CardHeader>
             </Card>
           </GridItem>
+        </GridContainer>
+
+        <GridContainer>
+          <GridItem xs={12} md={4}>
+        </GridItem>
+          <GridItem xs={12} md={4}>
+              <Card>
+                <CardHeader color="danger" stats={true} icon={true}>
+                  <CardIcon color="danger">
+                    <BeachAccessIcon/>
+                  </CardIcon>
+                  <p className={classes.cardCategory}>Holidays this month</p>
+                  <h3 className={classes.cardTitle}>{month_holidays?.length}</h3>
+                </CardHeader>
+              </Card>
+            </GridItem>
           <GridItem xs={12} md={4}>
             <Card>
               <CardHeader color="primary" stats={true} icon={true}>
                 <CardIcon color="primary">
-                  <Icon>info_outline</Icon>
+                  {ex_dayHolidays?
+                  (ex_dayHolidays.length>0?<CheckIcon/>:<ClearIcon/>):<ClearIcon/>
+                  }
                 </CardIcon>
                 <p className={classes.cardCategory}>Holidays on this day</p>
                 <h3 className={classes.cardTitle}>{ex_dayHolidays?.length}</h3>
@@ -305,7 +315,6 @@ class Dashboard extends React.Component<Props, State> {
             </Card>
           </GridItem>
         </GridContainer>
-
 
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
@@ -365,7 +374,8 @@ class Dashboard extends React.Component<Props, State> {
             </Card>
           </GridItem>
         </GridContainer>
-      </div>
+        </div>:null
+        }</div>
     );
   }
 }

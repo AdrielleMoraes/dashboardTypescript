@@ -6,7 +6,9 @@ import { createStyles } from '@material-ui/core';
 
 const style = createStyles({
   grid: {
-    margin: '0 -15px !important',
+    marginTop: '30px !important',
+    marginLeft: '50px !important',
+    marginRight: '50px !important',
     width: 'unset'
   }
 });
